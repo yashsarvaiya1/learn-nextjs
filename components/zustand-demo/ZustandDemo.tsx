@@ -7,11 +7,11 @@ import CounterInfo from './CounterInfo'
 
 export default function ZustandDemo() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-8">
+    <div className="min-h-screen from-blue-50 to-purple-50 p-8">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-4 from-blue-600 to-purple-600 bg-clip-text text-transparent">
             🐻 Zustand Store Demo
           </h1>
           <p className="text-gray-600 text-lg">
