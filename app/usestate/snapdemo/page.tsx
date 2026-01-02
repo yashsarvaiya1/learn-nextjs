@@ -1,4 +1,4 @@
-export default function StringPage(){
+export default function SnapPage(){
     return (
         <div className="h-screen overflow-y-auto snap-mandatory snap-y">
             <div className="h-screen p-10 snap-start">
