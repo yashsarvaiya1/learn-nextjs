@@ -73,7 +73,7 @@ export default function SearchComponent() {
               <button
                 className="border-2 border-red-500 text-red-500"
                 onClick={() => {
-                  setItems(items.filter((_,index) => index != items.indexOf(i)));
+                  setItems(items.filter((_,tempindex) => tempindex != index));
                 }}
               >
                 Delete
