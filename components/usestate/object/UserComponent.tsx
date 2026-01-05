@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import AgeComponent from '@/components/usestate/numbers/AgeComponent';
 
 type User = {
   name: string
@@ -22,39 +21,37 @@ export default function UserComponent() {
 
   const [user, setUser] = useState<User>(initialUser)
 
-  // TODO: Implement these functions
-
+  // ✅ Using property shorthand
   const updateName = (name: string) => {
-    // Update name property only
-    setUser({...user, name : name})
+    setUser({ ...user, name })
   }
 
   const updateEmail = (email: string) => {
-    setUser({...user, email : email})
-    // Update email property only
+    setUser({ ...user, email })
   }
 
   const updateAge = (age: number) => {
-    // Update age property only
-    setUser({...user, age : age})
+    setUser({ ...user, age })
   }
 
   const updateBio = (bio: string) => {
-    // Update bio property only
-    setUser({...user, bio : bio})
+    setUser({ ...user, bio })
   }
 
   const toggleActive = () => {
-    setUser({...user, isActive : !user.isActive})
-    // Toggle isActive property
+    setUser({ ...user, isActive: !user.isActive })
   }
 
   const resetProfile = () => {
     setUser(initialUser)
-    // Reset to initial state
   }
 
-  const isValidProfile = (user.name && user.age && user.bio && user.email && user.isActive)  // TODO: Check if all fields are filled
+  // ✅ Fixed: Don't require isActive, validate required fields only
+  const isValidProfile = 
+    user.name.trim() !== '' &&
+    user.email.trim() !== '' &&
+    user.age > 0 &&
+    user.bio.trim() !== ''
 
   return (
     <div className="p-8 max-w-2xl mx-auto font-mono">
@@ -92,6 +89,7 @@ export default function UserComponent() {
             onChange={(e) => updateAge(Number(e.target.value))}
             placeholder="Enter age"
             className="border p-2 w-full"
+            min="0"
           />
         </div>
 
@@ -137,7 +135,7 @@ export default function UserComponent() {
       {/* Actions */}
       <button
         onClick={resetProfile}
-        className="border px-4 py-2"
+        className="border-2 border-red-500 px-4 py-2 hover:bg-red-50"
       >
         Reset Profile
       </button>
