@@ -206,7 +206,7 @@ export default function ArrayOperationsPractice() {
             <button
               onClick={() => {
                 if (inputValue) {
-                  setNumbers([...numbers, Number(inputValue)])
+                  setNumbers([...numbers,  ])
                   setInputValue('')
                 }
               }}
