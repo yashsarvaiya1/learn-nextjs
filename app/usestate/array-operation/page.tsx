@@ -8,7 +8,7 @@ export default function ArrayOperationsPractice() {
   const [insertIndex, setInsertIndex] = useState(2)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-8">
+    <div className="min-h-screen from-blue-50 to-purple-50 p-8">
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Header */}
         <div className="text-center mb-8">
@@ -316,7 +316,7 @@ export default function ArrayOperationsPractice() {
         {/* ========================================
             CHEAT SHEET
             ======================================== */}
-        <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-xl p-6">
+        <div className="from-green-500 to-blue-500 text-white rounded-xl p-6">
           <h2 className="text-2xl font-bold mb-4">📝 Cheat Sheet</h2>
           <div className="space-y-2 font-mono text-sm">
             <p><strong>1. ACCESS:</strong> arr.at(-1)</p>

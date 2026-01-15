@@ -129,7 +129,7 @@ export default function TeamFormComponent() {
   const updateMemberName = (id: string, name: string) => {
     setTeam({
       ...team,
-      members: team.members.map((m) => (m.id === id ? { ...m, name } : m)),
+      members: team.members.map((m) => m.id === id ? { ...m, name } : m),
     });
     // Update specific member's name in team.members array
   };
