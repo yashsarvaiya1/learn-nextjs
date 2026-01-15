@@ -7,11 +7,14 @@ import ScrollPosition from "@/components/useeffect/window/ScrollPosition";
 import Stopwatch from "@/components/useeffect/timer/Stopwatch";
 import TimerDemo from "@/components/useeffect/timer/TimerDemo";
 import WindowWidth from "@/components/useeffect/window/WindowWidth";
+import ThemeToggle from "@/components/useeffect/localstorage/ThemeToggle";
+import RemeberName from "@/components/useeffect/localstorage/RemeberName";
+import PersistantTimer from "@/components/useeffect/localstorage/PersistantTimer";
 
 export default function EffectPage(){
     return (
         <>
-            <OnlineStatus />
+            <PersistantTimer />
         </>
     )
 }
