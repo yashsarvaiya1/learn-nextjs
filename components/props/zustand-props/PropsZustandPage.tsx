@@ -1,6 +1,6 @@
 'use client';
 import { useCounterStore } from '@/stores/zustand/counterStore';
-import CounterDisplay from '@/components/props/CounterDisplay';
+import CounterDisplay from '@/components/props/zustand-props/CounterDisplay';
 
 export default function PropsZustandPage() {
   const { count, increment, decrement } = useCounterStore();
